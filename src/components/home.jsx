@@ -21,7 +21,7 @@ class Home extends Component {
       <BrowserRouter>
       <>      
       <img src={Voz} alt=""/>   
-      <Nav/>
+      <Nav />
         <Switch>
         <Route exact path="/" component={Home1} />;
         <Route path="/main" component={Main} />;
