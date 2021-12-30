@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Voz from "../img/voz.jpeg"
 import Nav from "./nav";
 import Main from "./main";
@@ -21,11 +21,11 @@ class Home extends Component {
       <>      
       <img src={Voz} alt=""/>   
       <Nav/>
-     fuck
+     
       
-      <BrowserRouter>
+     
         <Switch>
-        {/* <Route exact path="/" component={Home1} />; */}
+        <Route exact path="/" component={Home1} />;
         <Route exact path="/main" component={Main} />;
         <Route exact path="/register" component={Register} />;
         <Route exact path="/enter" component={Enter} />;
@@ -36,7 +36,7 @@ class Home extends Component {
         <Route exact path="/add" component={Add} />;
         <Route exact path="/list" component={List} />;
         </Switch>
-        </BrowserRouter>
+        
       </>
     );
   }
