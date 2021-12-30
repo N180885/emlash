@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Voz from "../img/voz.jpeg"
 import Nav from "./nav";
 import Main from "./main";
@@ -18,26 +18,25 @@ class Home extends Component {
   };
   render() {
     return (
+      <BrowserRouter>
       <>      
       <img src={Voz} alt=""/>   
       <Nav/>
-     
-      
-     
         <Switch>
         <Route exact path="/" component={Home1} />;
-        <Route exact path="/main" component={Main} />;
-        <Route exact path="/register" component={Register} />;
-        <Route exact path="/enter" component={Enter} />;
-        <Route exact path="/sot" component={Sot} />;
-        <Route exact path="/rez" component={Rez} />;
-        <Route exact path="/lech" component={Lech} />;
-        <Route exact path="/info" component={Info} />;
-        <Route exact path="/add" component={Add} />;
-        <Route exact path="/list" component={List} />;
+        <Route path="/main" component={Main} />;
+        <Route path="/register" component={Register} />;
+        <Route path="/enter" component={Enter} />;
+        <Route path="/sot" component={Sot} />;
+        <Route path="/rez" component={Rez} />;
+        <Route path="/lech" component={Lech} />;
+        <Route path="/info" component={Info} />;
+        <Route path="/add" component={Add} />;
+        <Route path="/list" component={List} />;
         </Switch>
         
       </>
+      </BrowserRouter>
     );
   }
 }
