@@ -1,11 +1,9 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import "./style.css";
-
+import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import Voz from "./img/voz.jpeg"
 import Nav from "./components/nav";
 import Main from "./components/main";
-import Home1 from "./components/home1";
+import Home from "./components/home";
 import Enter from "./views/enter";
 import Register from "./views/register";
 import Sot from "./views/sot";
@@ -14,15 +12,17 @@ import Lech from "./views/lech";
 import Info from "./views/info";
 import Add from "./views/add";
 import List from "./views/list";
+import "./style.css";
 
 function App () {
   return (
-    <BrowserRouter> 
+    <Router> 
     <>
      <img src={Voz} alt=""/> 
-     <Nav /> 
+     <Nav />
+     
      <Switch>     
-        <Route exact path="/" component={Home1} />;
+        <Route exact path="/" component={Home} />;
         <Route path="/main" component={Main} />;
         <Route path="/register" component={Register} />;
         <Route path="/enter" component={Enter} />;
@@ -35,7 +35,7 @@ function App () {
      </Switch>      
 
      </>
-    </BrowserRouter>
+    </Router>
   );
 };
 export default App;
