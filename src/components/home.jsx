@@ -21,9 +21,11 @@ class Home extends Component {
       <>      
       <img src={Voz} alt=""/>   
       <Nav/>
+     fuck
+      
       <BrowserRouter>
         <Switch>
-        <Route exact path="/" component={Home1} />;
+        {/* <Route exact path="/" component={Home1} />; */}
         <Route exact path="/main" component={Main} />;
         <Route exact path="/register" component={Register} />;
         <Route exact path="/enter" component={Enter} />;
