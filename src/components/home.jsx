@@ -12,6 +12,8 @@ import Lech from "../views/lech";
 import Info from "../views/info";
 import Add from "../views/add";
 import List from "../views/list";
+import "../style.css"
+
 class Home extends Component {
   state = {
    
@@ -20,8 +22,8 @@ class Home extends Component {
     return (
       <BrowserRouter>
       <>      
-      <img src={Voz} alt=""/>   
-      <Nav />
+     
+   
         <Switch>
         <Route exact path="/" component={Home1} />;
         <Route path="/main" component={Main} />;
@@ -33,8 +35,7 @@ class Home extends Component {
         <Route path="/info" component={Info} />;
         <Route path="/add" component={Add} />;
         <Route path="/list" component={List} />;
-        </Switch>
-        
+        </Switch>        
       </>
       </BrowserRouter>
     );
